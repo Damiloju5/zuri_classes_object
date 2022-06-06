@@ -6,24 +6,25 @@ class Student:
         self.age = age
         self.tracks = tracks
         self.score = score
-        pass
+        
+
     def change_name(self, name):
         if(name != self.name):
            self.name = name
            print(self.name)
         else:
-          print("Invalid")
+          print("same name")
        
     def change_age(self, age):
         if(age != self.age):
-          self.age = age
+          self.age = int(age)
           print(self.age)
         else:
-          print("Invalid")
+          print("same age")
        
     def add_track(self, track):
         if(track in self.tracks):
-          print("Invalid")
+          print("track exists")
         else:
           self.tracks.append(track)
           print(self.tracks)
@@ -34,7 +35,11 @@ class Student:
 
 
 Bob = Student(name="Bob", age=26, tracks=["FE","BE"],score=20.90)
-
+Bob.change_name("Bob")
+Bob.change_age(26)
+Bob.add_track("FE")
+Bob.get_score()
+print("......................")
 # Expected methods
 Bob.change_name("Peter")
 Bob.change_age(34)
